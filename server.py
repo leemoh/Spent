@@ -29,7 +29,8 @@ app.jinja_env.undefined = StrictUndefined
 
 app = Flask(__name__, instance_relative_config=True)
 
-app.secret_key = os.getenv('SECRET_KEY')
+app.secret_key = os.urandom(12)
+#app.secret_key = os.getenv('SECRET_KEY')
 
 spent_database = os.getenv('POSTGRES_DB_URL')
 connect_to_db(app, spent_database)
