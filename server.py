@@ -91,7 +91,7 @@ def intercom_webhook():
     print 
     print
     print
-    print x_signature_header
+    print(x_signature_header)
     print
     print
     print
@@ -101,7 +101,7 @@ def intercom_webhook():
     print
     print
     print
-    print json_blob
+    print(json_blob)
     print
     print
     print
@@ -109,36 +109,36 @@ def intercom_webhook():
     KEY = os.getenv('MARSH_SECRET')
 
     print
-    print type(KEY)
-    print "yo"
-    print "hi"
+    print (type(KEY))
+    print ("yo")
+    print ("hi")
     print
 
     hash_result = hmac.new(KEY, json_blob, hashlib.sha1).hexdigest()
 
     print
-    print "hi"
+    print ("hi")
     print
-    print type(hash_result)
-    print hash_result
-    print "sha1=" + hash_result
+    print (type(hash_result))
+    print (hash_result)
+    print ("sha1=" + hash_result)
     print
 
     if "sha1=" + hash_result == x_signature_header:
 
         print
         print
-        print "cool"
+        print ("cool")
         print
         print
 
-        return 'OK'
+        return ('OK')
 
     else:
 
         print
         print
-        print "bad"
+        print ("bad")
         print
         print
 

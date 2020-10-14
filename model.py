@@ -116,4 +116,4 @@ if __name__ == "__main__":
     spent_database = os.getenv('POSTGRES_DB_URL', 'postgres:///spending')
 
     connect_to_db(app, spent_database)
-    print "Connected to DB."
+    print ("Connected to DB.")

@@ -12,7 +12,7 @@ import os
 def load_users():
     """ Load users from users.csv into database """
 
-    print "Users"
+    print("Users")
 
     # Delete all rows in table, so if we need to run this a second time,
     # we won't be trying to add duplicate users
@@ -42,7 +42,7 @@ def load_users():
 def load_categories():
     """ Load categories from categories.csv into database """
 
-    print "Categories"
+    print ("Categories")
 
     # Delete all rows in table, so if we need to run this a second time,
     # we won't be trying to add duplicate categories
@@ -67,7 +67,7 @@ def load_categories():
 def load_budget():
     """ Load budget from budget.csv into database """
 
-    print "Budget"
+    print ("Budget")
 
     # Delete all rows in table, so if we need to run this a second time,
     # we won't be trying to add duplicate users
@@ -101,7 +101,7 @@ def load_budget():
 def load_expenditures():
     """ Load expenditures from expenditures.csv into database """
 
-    print "Expenditures"
+    print ("Expenditures")
     Expenditure.query.delete()
 
     for row in open("seed_data/expenditures.csv"):
